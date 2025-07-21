@@ -31,19 +31,17 @@ body {
 }
 
 #mission-board {
-  height: 80%;
-  margin-bottom: 1rem;
+  height: 100%;
   width: 351px;
-  padding: 40px;
+  padding-left: 2rem;
 }
 
 #scroll-container {
-  height: 88%;
-  width: 431px;
+  height: 100%;
+  width: 420px;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-
 }
 
 #scroll-container::-webkit-scrollbar {
@@ -55,6 +53,7 @@ body {
   border: 2px solid #27ffae;
   padding: 1rem;
   margin-bottom: 1rem;
+  margin-top: 1rem;
   width: 300px;
   text-align: left;
 }
@@ -72,8 +71,9 @@ body {
 
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 3rem;
   margin-left: 2rem;
+  margin-right: 2rem;
   padding: 1rem;
   border: 2px dashed #27ffae;
   text-align: left;
