@@ -9,7 +9,7 @@ fetch('https://raw.githubusercontent.com/Lefaeic/Project_RRI/refs/heads/main/mis
         <h2>${mission.title}</h2>
         <p><strong>Faction:</strong> ${mission.faction}</p>
         <p><strong>Brief:</strong> ${mission.brief}</p>
-        <p><strong>Encryption:</strong> ${mission.status}</p>
+        <p><strong>Encryption:</strong> ${mission.encryption}</p>
         <p><strong>Assigned:</strong> ${mission.players.join(', ')}</p>
       `;
 
