@@ -1,0 +1,84 @@
+body {
+  height: 100%;
+  background-color: #000;
+  color: #27ffae;
+  font-family: monospace;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    rgba(39, 255, 174, 0.15),
+    rgba(39, 255, 174, 0.15) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.typewriter {
+  display: block;
+  white-space: normal;
+  overflow: hidden;
+  position: relative;
+  animation: typing 2s steps(120, end);
+}
+
+#mission-board {
+  height: 80%;
+  width: 351px;
+  padding: 40px;
+}
+
+#scroll-container {
+  height: 90%;
+  width: 431px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+}
+
+#scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.mission-card {
+  background: rgba(0, 255, 0, 0.1);
+  border: 2px solid #27ffae;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  width: 300px;
+  text-align: left;
+}
+
+.mission-card:hover {
+  background: #27ffae;
+  color: #000;
+  box-shadow: 0 0 10px #27ffae;
+  transform: scale(1.1);
+  transform-origin: center;
+  transition: all 0.2s ease;
+}
+
+#mission-detail {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-left: 2rem;
+  padding: 1rem;
+  border: 2px dashed #27ffae;
+  text-align: left;
+
+}
+
+td {
+  vertical-align: top;
+}
