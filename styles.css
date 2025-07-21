@@ -37,7 +37,7 @@ body {
 }
 
 #scroll-container {
-  height: 90%;
+  height: 88%;
   width: 431px;
   overflow-y: scroll;
   -ms-overflow-style: none;
