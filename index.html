@@ -9,25 +9,43 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
   <audio id="typingSFX" src="sfx/typing.ogg"></audio>
+  <audio id="background-music" src="sfx/test.mp3"></audio>
 </head>
 <body>
-  <div id="horus-ui"  style="text-align: center; height: 100%; overflow-y: hidden;">
-    <h1 style="text-shadow: 0 0 10px #27ffae;">//HOR_OS_v4_PFHOURAPHOUBIA//</h1>
-    <p1 style="text-shadow: 0 0 10px #27ffae;">Welcome, Lancer</p1>
-    <table  style="margin: auto; height: 80%; width: 70%; border: 2px solid #27ffae; margin-top: 1rem; box-shadow: 0 0 10px #27ffae;">
-      <tr>
-        <td style="width: 431px;">
-          <div id="scroll-container">
-            <div id="mission-board"></div>
-          </div>
-        </td>
-        <td>
-          <div id="mission-detail">
-         </div>
-        </td>
-      </tr>
-    </table>
+  <div id="login-screen" class="page">
+      <div id="login-form" class="login">
+        <h1 style="text-shadow: 0 0 10px #27ffae; display: block;"> //HOR_OS_v4_PFHOURAPHOUBIA//</h1>
+        <img src="https://raw.githubusercontent.com/Lefaeic/Project_RRI/refs/heads/main/RRI_final.svg" style="height: 55%; margin: 2rem;"><br>
+        <p1 style="text-shadow: 0 0 10px #27ffae; margin: 1rem;">Please login:</p1><br><br>
+        <input class="textinput" type="text" id="username" placeholder="Enter Username"><br><br>
+        <button class="textinput" onclick="login()">Initialize</button>
+      </div>
   </div>
-  <script src="script.js"></script>
+
+  <div id="boot-screen" style="display: none;">
+    <pre id="boot-log" style="margin-left: 30%;"></pre>
+  </div>
+
+  <div id="mission-screen" class="page" style="display: none;">
+    <div id="horus-ui"  style="text-align: center; height: 100%; overflow-y: hidden;">
+      <h1 style="text-shadow: 0 0 10px #27ffae;">//HOR_OS_v4_PFHOURAPHOUBIA//</h1>
+      <p1 id="greet" style="text-shadow: 0 0 10px #27ffae;"></p1>
+      <table  style="margin: auto; height: 80%; width: 70%; border: 2px solid #27ffae; margin-top: 1rem; box-shadow: 0 0 10px #27ffae;">
+        <tr>
+          <td style="width: 431px;">
+            <div id="scroll-container">
+              <div id="mission-board"></div>
+            </div>
+          </td>
+          <td>
+            <div id="mission-detail">
+          </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <button id="music-toggle" class="music-button">BGM: 🔊</button>
+  </div>
+<script src="script.js"></script>
 </body>
 </html>
