@@ -131,7 +131,7 @@ function printNextLine() {
 ;
 
 function sendMissionAction(missionName, action) {
-  const playerName = localStorage.getItem('horus-username') || 'Unknown Player';
+  const playerName = localStorage.getItem('horus_username');
   const payload = {
     playerName,
     missionName,
