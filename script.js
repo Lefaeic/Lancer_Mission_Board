@@ -130,19 +130,30 @@ function printNextLine() {
 }
 ;
 
-function submitToSheet(missionName, action) {
+function sendMissionAction(missionName, action) {
+  const playerName = localStorage.getItem('horus-username') || 'Unknown Player';
+  const payload = {
+    playerName,
+    missionName,
+    action
+  };
+
   fetch('https://script.google.com/macros/s/AKfycbyXQIA89XZWAo8zwhKmT8K0_yS18Ji7v9qWGCs8zh8JF8XfV0vzn__faYxmDWXZK541-w/exec', {
     method: 'POST',
-    body: JSON.stringify({
-      playerName: localStorage.getItem('horus-username'),
-      missionName: missionName,
-      action: action
-    }),
     headers: {
       'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.status === 'success') {
+      alert(`✅ ${action} request sent for "${missionName}".`);
+    } else {
+      alert(`❌ Error: ${data.message}`);
     }
   })
-  .then(res => console.log('Submitted:', res))
-  .catch(err => console.error('Error:', err));
+  .catch(err => {
+    alert(`❌ Failed to send request: ${err}`);
+  });
 }
-;
