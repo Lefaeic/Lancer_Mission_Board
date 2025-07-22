@@ -47,7 +47,7 @@ function showDetails(mission) {
     <p class="typewriter"><strong>Priority:</strong> ${mission.priority}</p>
     <p class="typewriter"><strong>Tags:</strong> ${mission.tags.join(', ')}</p>
     <p class="typewriter">${mission.details}</p>
-    <button class="textinput" onclick="submitToSheet('${mission.title}', 'join')">Join</button>
+    <button class="textinput" onclick="sendMissionAction('${mission.title}', 'join')">Join</button>
   `;
   detail.appendChild(content);
   detail.style.display = 'block';
