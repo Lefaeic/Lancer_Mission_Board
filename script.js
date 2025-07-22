@@ -137,8 +137,11 @@ function sendMissionAction(missionName, action) {
     missionName,
     action
   };
-  const headers = { 'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}
+  const headers = {
+      "Content-Type": "application/json",
+      "Content-Length": body.length,
+      "Host": "script.google.com"
+  };
   
   fetch('https://script.google.com/macros/s/AKfycbyXQIA89XZWAo8zwhKmT8K0_yS18Ji7v9qWGCs8zh8JF8XfV0vzn__faYxmDWXZK541-w/exec, {
     method: 'POST',
