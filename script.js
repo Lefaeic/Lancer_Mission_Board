@@ -141,9 +141,8 @@ function sendMissionAction(missionName, action) {
                     'Access-Control-Allow-Origin':'*',
                     'Access-Control-Allow-Methods':'POST,PATCH,OPTIONS'}
   
-  fetch('https://script.google.com/macros/s/AKfycbyXQIA89XZWAo8zwhKmT8K0_yS18Ji7v9qWGCs8zh8JF8XfV0vzn__faYxmDWXZK541-w/exec', {
+  fetch('https://corsproxy.io/?https://script.google.com/macros/s/AKfycbyXQIA89XZWAo8zwhKmT8K0_yS18Ji7v9qWGCs8zh8JF8XfV0vzn__faYxmDWXZK541-w/exec', {
     method: 'POST',
-    statusCode: 200,   
     headers:headers,
     
     body: JSON.stringify(payload)
