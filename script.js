@@ -146,7 +146,6 @@ function sendMissionAction(missionName, action) {
     body: JSON.stringify(payload),
     headers:{
       "Content-Type": "application/json",
-      "Content-Length": body.length,
       "Host": "script.google.com"
     }   
     
