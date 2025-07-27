@@ -141,7 +141,7 @@ function sendMissionAction(missionName, action) {
       
   };
   
-  fetch('https://script.google.com/macros/s/AKfycbyXQIA89XZWAo8zwhKmT8K0_yS18Ji7v9qWGCs8zh8JF8XfV0vzn__faYxmDWXZK541-w/exec', {
+  fetch(' https://cors-anywhere.herokuapp.com?https://script.google.com/macros/s/AKfycbyXQIA89XZWAo8zwhKmT8K0_yS18Ji7v9qWGCs8zh8JF8XfV0vzn__faYxmDWXZK541-w/exec', {
     method: 'POST',
     body: JSON.stringify(payload),
     headers:{
